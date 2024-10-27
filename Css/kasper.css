@@ -708,3 +708,161 @@ header nav .form {
   right: 0;
   top: 0;
 }
+
+.pricing {
+  padding: 60px 0;
+}
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pricing .plans .plan {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.pricing .plans .plan .head {
+  padding: 40px 20px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .plans .plan .head span {
+  font-size: 60px;
+  font-weight: bold;
+}
+.pricing .plans .plan .head span::before {
+  content: "$";
+  position: relative;
+  top: -40px;
+  margin-right: 15px;
+  font-size: 30px;
+  font-weight: normal;
+}
+.pricing .plans .plan .head span::after {
+  content: "/Mo";
+  position: relative;
+  font-size: 30px;
+  right: -15px;
+}
+.pricing .plans .plan ul {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pricing .plans .plan .foot a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 30px auto;
+}
+.pricing .contact-text {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .contact-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  padding: 15px 30px;
+  text-decoration: none;
+  color: white;
+  border-radius: 7px;
+}
+
+.subscrib {
+  padding: 60px 0;
+  background-image: url("../images/subscribe.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+.subscrib::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 /50%);
+}
+.subscrib .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .subscrib .container {
+    flex-direction: column;
+  }
+}
+.subscrib form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+}
+.subscrib form i {
+  position: absolute;
+  left: 25px;
+}
+
+.subscrib form input[type="email"] {
+  background: none;
+  border: 1px solid white;
+  border-right: none;
+  padding: 20px 20px 20px 60px;
+  caret-color: var(--main-color);
+  width: calc(100% - 130px);
+}
+
+.subscrib form input[type="submit"] {
+  width: 130px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px 20px;
+  border: 1px solid white;
+  border-left: none;
+  text-transform: uppercase;
+}
+.subscrib form input[type="email"] :focus,
+.subscrib form input[type="submit"]:focus {
+  outline: none;
+}
+.subscrib form ::placeholder {
+  color: white;
+}
+.subscrib p {
+  line-height: 2;
+  margin-left:50px;
+}
+@media (max-width:991px) {
+  .subscrib p {
+    margin: 30px 0 0 ;
+  }
+}
